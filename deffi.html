@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Diffie-Hellman Key Exchange</title>
+    <script defer src="script.js"></script>  
+</head>
+<body>
+    <h1>Diffie-Hellman Key Exchange</h1>
+    
+    <form id="dh-form">
+        <h3>Enter Prime Number (P):</h3>
+        <input type="number" id="prime" placeholder="Enter a prime number" required>
+        
+        <h3>Enter Generator (G):</h3>
+        <input type="number" id="generator" placeholder="Enter a generator" required>
+
+        <div class="A">
+            <h2>User A</h2>
+            <input type="number" id="xa" placeholder="Enter private key for A" required>
+        </div>
+
+        <div class="B">
+            <h2>User B</h2>
+            <input type="number" id="xb" placeholder="Enter private key for B" required>
+        </div>
+
+        <br>
+        <input type="button" value="Calculate" onclick="calculateDH()">
+    </form>
+
+    <h2>Results:</h2>
+    <p><strong>A's Public Key (YA):</strong> <span id="ya"></span></p>
+    <p><strong>B's Public Key (YB):</strong> <span id="yb"></span></p>
+    <p><strong>Shared Secret Key A:</strong> <span id="sharedA"></span></p>
+    <p><strong>Shared Secret Key B:</strong> <span id="sharedB"></span></p>
+    
+</body>
+</html>
